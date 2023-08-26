@@ -1,0 +1,119 @@
+body{
+    margin: 0; /*Es para que no tenga márgenes indeseables o por defecto, ya si uno se lo quiere poner se o pone concienzudamente.*/
+    /*background-color: red;*/
+  }
+  h1{
+    /*Para que el título principal no este tan pegado al margen superior*/
+    padding-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+  }
+  
+  h1,h2,h3,p{
+    margin-top: 0; /*Es para que no tenga márgenes indeseables o por defecto, ya si uno se lo quiere poner se o pone concienzudamente.*/
+  }
+  h2{
+    margin-bottom: 0;
+  }
+  p{
+    margin-bottom: 0;
+  }
+  
+  #container {
+    max-width: 300px; /*Estas tres líneas de código son para centrar la estructura HTML y el texto mismo.*/
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  img{
+    max-width: 300px; /*Lo mismo que con .container */
+    margin: 0 auto;
+    margin-bottom: 0.35em;
+  }
+  
+  #inputEl1, #inputEl2, #calc1{/*calc1 --> Botón --> ME FALTA LA HIPOTENUSA*/
+    margin: 0.5em 0;
+  }
+  
+  #inputEl1, #inputEl2{
+    padding: 0.25em 0; 
+    width: 25%; /*Con porcentaje para un diseño RESPONSIVO*/
+    text-align: center; /*Alinea el texto al centro*/
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+  button{ /*Son los botones en GENERAL*/
+    border: black solid 1px;
+    padding: 0.8em 1.6em;/*padding es para que se hagan más grandes los botones*/
+    font-weight: bold;
+    width: 70%; /*"width" con porcentaje para un diseño RESPONSIVO*/
+    /*El comando width (ancho) es para el 
+    botón solamente, no para el texto.*/
+    color: white;
+    border-radius: 5px;
+    background: red;
+    cursor: pointer; /*Este comando es para que, cuando el cursor pase por encima del botón, se cambia de una flecha a una manita como se ve en algunas páginas web*/
+  }
+  
+  #calc:hover{
+  background-color:rgb(11, 115, 141) ; /*Este comando es para que, cuando el cursor pase por encima del botón (ME FALTA UN CATETO), se cambia el color de fondo del botón y de fuente*/
+  color: black;
+  }
+  
+  #calc1{ /* Botón --> ME FALTA LA HIPOTENUSA */
+    background: rgb(11, 219, 46) ;
+  }
+  #calc1:hover{
+    background-color: #00FA9A; /*Este comando es para que, cuando el cursor pase por encima del botón (ME FALTA LA HIPOTENUSA), se cambia el color de fondo del botón y de fuente*/
+    color: black;
+  }
+  
+  #ulEl { /* Son para estilizar el texto que aparece cuando el usuario hace clic en alguno de los botones e.g "El cateto es igual a o "La hipotenusa tiene una magnitud"*/
+    font-size: 1.3rem; /*Diseño RESPONSIVO*/
+    font-style: italic;
+  }
+  
+  #open-modal{ /*Botón de ayuda*/
+    width:30% ;
+    background:#0000FF ;
+    margin-top: 0.6em;
+  }
+  
+  #overlay{ /*Es el recuadro que dice:
+    <p>Solo preocúpate por ingresar tus datos (solo números y no importa el orden), la calculadora hará lo demás. 😀</p>
+    <button id="close-modal">CERRAR 👋</button>*/
+    display:none;
+    margin-top: -25em;
+    margin-left: 60em;
+    width: 15%;
+  }
+  
+  #close-modal{ /*Es e botón con la manira para cerrar la AYUDA*/
+    margin-top:0.4em;
+  
+  }
+  
+  #modal{ /*Es el texto que aparece cuando se hace clic en el botón de ayuda*/
+    font-size: 20px;
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+  
+  #open-modal:hover{  /*Botón de ayuda, pero cuando el cursor le "pasa por encima" */
+  background: #FF8C00;
+  color:black;
+  }
+  
+  #close-modal:hover{ /*Botón de cerrar (ayuda), pero cuando el cursor le "pasa por encima" */
+    background: #20B2AA;
+    color:black;
+  }
+  
+  @media (max-width: 960px) { /*NO JALA*/
+    #overlay
+    #modal{
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+    }
+   }
